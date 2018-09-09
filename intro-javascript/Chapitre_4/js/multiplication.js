@@ -37,16 +37,38 @@ while ((table >= 1) || (table <= 10)) {
     }
 }*/
 
-//Version B
+//Version B (while + for)
 
+/*
 var table ="";
 
 while((table <= 2) || (table >=9)){
 var table = Number(prompt("entrer la table de multiplication"));
-
 }
 
-
-for (i=1 ; i<=10 ; table++){
+for (i=1 ; i<=10 ; i++){
 console.log(table+ "x" +i +"=" +table * i);
+}
+*/
+
+// Version C (While)
+
+var table = "";
+
+while ((table <= 2) || (table >= 9)) {
+    var table = Number(prompt("entrer la table de multiplication"));
+}
+
+var i = "";
+while ( i <= 10) {
+
+    console.log(table + "x" + i++ + "=" + table * i);
+
+// ou 
+
+/*
+console.log(table + "x" + i + "=" + table * i);
+i++;
+*/
+
 }
