@@ -1,4 +1,6 @@
 //var texte = "";
+
+
 while ((texte !== "non") || (texte !== "oui")) {
     var texte = prompt("Voulez-vous jouer au ni oui, ni non ?");
 }
