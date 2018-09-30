@@ -1,32 +1,40 @@
 
-
 for (var i = 1; i <= 100; i++) {
-    //console.log(e++);
-    //if ((i % 3) || (i%3!=0)) {
 
-    var k= '';
-    var j='';
-        if (i % 3 == k) {
-        console.log(k+"buzz");
+    var k = '';
+    var j = '';
 
 
-    } else if (i % 5==j) {
-        console.log(j+"fizz");
+    if ((i % 3 == k) && (i % 5 == j)) {
+        console.log(k + j + "FizzBuzz");
+
+    } else if (i % 3 == k) {
+        console.log(k + "buzz");
+
+
+    } else if (i % 5 == j) {
+        console.log(j + "fizz");
+
+
 
     } else {
         console.log(i);
     }
-    //var e = 1;
-    //console.log(e++);
 
 }
 
 
-/*
-console.log(  3 %  3 ); = 0
+/*  Corrigé 
 
-console.log(  3 %  5 );= 3
+for (var nombre = 1; nombre <= 100; nombre++) {
+    if ((nombre % 3 === 0) && (nombre % 5 === 0))
+        console.log("FizzBuzz");
+    else if (nombre % 3 === 0)
+        console.log("Fizz");
+    else if (nombre % 5 === 0)
+        console.log("Buzz");
+    else
+        console.log(nombre);
+}
 
-1 2 4 7 8 11 ...  = non
-*/
-
+  */
