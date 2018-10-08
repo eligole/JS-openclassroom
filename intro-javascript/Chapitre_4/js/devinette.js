@@ -1,6 +1,10 @@
 //console.log("Bienvenue dans ce jeu de devinette !");
 
 // Cette ligne génère aléatoirement un nombre entre 1 et 100
+//fonction random : chiffre au hazard
+//fonction floor : retire les decimales (chiffre apres la virgule)
+//+1 = je pense qu'elle permet d'eviter d'avoir un zero.
+
 var solution = Math.floor(Math.random() * 100) + 1;
 //console.log(solution);
 var x = Number(prompt("entrer une valeur"));
@@ -17,7 +21,6 @@ for (var i = 1; i <= 6; i++) {
         var x = Number(prompt("entrer une valeur"));
     } else if (x === solution) {
         console.log("vous avez trouvé la bonne réponse");
-
     }
 
     /*
@@ -27,8 +30,6 @@ for (var i = 1; i <= 6; i++) {
     }*/
 
 }
-
-
 
 // Décommentez temporairement cette ligne pour mieux vérifier le programme
 //console.log("(La solution est " + solution + ")");
