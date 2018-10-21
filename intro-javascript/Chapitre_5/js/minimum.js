@@ -1,12 +1,12 @@
-function min(a, b) {
+function petit(a, b) {
 
     var m = Math.min(a, b);
     //console.log(Math.min(a,b));
     return m;
 }
-console.log(min(4.5, 5));
-console.log(min(19, 9));
-console.log(min(1, 1));
+console.log(petit(4.5, 5));
+console.log(petit(19, 9));
+console.log(petit(1, 1));
 
 
 //Methode 2 correction
