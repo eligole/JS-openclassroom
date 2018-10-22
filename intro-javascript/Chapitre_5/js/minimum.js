@@ -1,7 +1,6 @@
 function petit(a, b) {
 
-    var m = Math.min(a, b);
-    //console.log(Math.min(a,b));
+    var m = Math.min(a, b); //Math.min() renvoie le minimum des nombres passés en paramètres.
     return m;
 }
 console.log(petit(4.5, 5));
