@@ -1,28 +1,54 @@
 var mot = prompt("entre un mot");
 
-var longueurMot = mot.length;
+//var longueurMot = mot.length;
 
-var motEnMinuscules = mot.toLowerCase();
-var motEnMajuscules = mot.toUpperCase();
-var nb="";
+//var motEnMinuscules = mot.toLowerCase();
+//var motEnMajuscules = mot.toUpperCase();
+var nb = "";
+var nbVoyelle = "";
+var j= 0;
+
+
+for (var i = 0; i < mot.length; i++) {
+    
+    if (mot[""] === "a" , "e" , "i" , "o" , "u" ,"y"  ) {
+
+        console.log(mot[""]);
+        nbVoyelle = j++;
+
+    }
+
+
+}
+
+
+console.log(mot[i]);
+console.log(nbVoyelle);
+
+
+/*
 function compterNbVoyelle(mot) {
 
     for (var i = 0; mot.length; i++) {
         if (mot[i] === ["a"],["e"],["i"] ,["o"] ,["u"] ,["y"]  ) {
             nbVoyelle = mot[i].length;
-        } else {
-            nbConsonne = mot[i].length;
-        }
+        } 
     }
 
-    return nb ;
-}
+    return nbVoyelle ;
+}*/
 
-console.log("le mot " + mot + " contient " + longueurMot + " caracteres");
-console.log("il s'ecrit en minucule : " + motEnMinuscules);
-console.log("il s'ecrit en majuscule : " + motEnMajuscules);
+/*
+function compterNbConsonne (){
 
-console.log(compterNbVoyelle(nb));
+}*/
+
+
+//console.log("le mot " + mot + " contient " + longueurMot + " caracteres");
+//console.log("il s'ecrit en minucule : " + motEnMinuscules);
+//console.log("il s'ecrit en majuscule : " + motEnMajuscules);
+
+//console.log(compterNbVoyelle(nbVoyelle));
 
 //console.log("il contient" + compterNbVoyelle() + " voyelle et " + +"consonnes");
 
