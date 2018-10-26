@@ -1,89 +1,47 @@
 var mot = prompt("entre un mot");
 
-//var longueurMot = mot.length;
-
-//var motEnMinuscules = mot.toLowerCase();
-//var motEnMajuscules = mot.toUpperCase();
-var nb = "";
-var nbVoyelle = "";
-var j= 0;
+var longueurMot = mot.length;
+var motEnMinuscules = mot.toLowerCase();
+var motEnMajuscules = mot.toUpperCase();
 
 
-for (var i = 0; i < mot.length; i++) {
-    
-    if (mot[""] === "a" , "e" , "i" , "o" , "u" ,"y"  ) {
-
-        console.log(mot[""]);
-        nbVoyelle = j++;
-
+function nbVoyelle(phrase) {
+    var j = 1; //j'ajoute +1 pour ne pas démarrer l'incrmentation a 0.
+    var k = 1;
+    for (var i = 0; i < mot.length; i++) {
+        if ((mot[i] === "a") || (mot[i] === "e") || (mot[i] === "i") || (mot[i] === "o") || (mot[i] === "u") || (mot[i] === "y")) {
+            var nbVoyelle = j++;
+        } else {
+            var nbConsonne = k++;
+        }
     }
-
-
+    var zgeg = "il y a " + nbVoyelle + " voyelles " + " et " + nbConsonne + " consonnes ";
+    return zgeg;
 }
 
 
-console.log(mot[i]);
-console.log(nbVoyelle);
+//for (var i = 0; i < mot.length; i++) {
+    for (var i = mot.length ;  i>=0 ; i--) {
+
+    console.log(mot[i]);
+}
+
 
 
 /*
-function compterNbVoyelle(mot) {
+function inverser(){
 
-    for (var i = 0; mot.length; i++) {
-        if (mot[i] === ["a"],["e"],["i"] ,["o"] ,["u"] ,["y"]  ) {
-            nbVoyelle = mot[i].length;
-        } 
-    }
+}
 
-    return nbVoyelle ;
-}*/
-
-/*
-function compterNbConsonne (){
-
-}*/
-
-
-//console.log("le mot " + mot + " contient " + longueurMot + " caracteres");
-//console.log("il s'ecrit en minucule : " + motEnMinuscules);
-//console.log("il s'ecrit en majuscule : " + motEnMajuscules);
-
-//console.log(compterNbVoyelle(nbVoyelle));
-
-//console.log("il contient" + compterNbVoyelle() + " voyelle et " + +"consonnes");
+*/
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log("le mot " + mot + " contient " + longueurMot + " caracteres");
+console.log("il s'ecrit en minucule : " + motEnMinuscules);
+console.log("il s'ecrit en majuscule : " + motEnMajuscules);
+console.log(nbVoyelle(mot));
 
 
 
