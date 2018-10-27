@@ -4,10 +4,10 @@ var longueurMot = mot.length;
 var motEnMinuscules = mot.toLowerCase();
 var motEnMajuscules = mot.toUpperCase();
 
-
 function nbVoyelle(phrase) {
     var j = 1; //j'ajoute +1 pour ne pas démarrer l'incrmentation a 0.
     var k = 1;
+    //
     for (var i = 0; i < mot.length; i++) {
         if ((mot[i] === "a") || (mot[i] === "e") || (mot[i] === "i") || (mot[i] === "o") || (mot[i] === "u") || (mot[i] === "y")) {
             var nbVoyelle = j++;
@@ -19,33 +19,27 @@ function nbVoyelle(phrase) {
     return zgeg;
 }
 
-
-//for (var i = 0; i < mot.length; i++) {
-    for (var i = mot.length ;  i>=0 ; i--) {
-
-    console.log(mot[i]);
+function inverser(verlan) {
+    var inverse = "";
+    for (var i = mot.length - 1; i >= 0; i--) { //decrementation , ne pas oublier le -1 pour commencer par la derniere lettre.
+        inverse = inverse + mot[i];
+    }
+    var resultat = inverse;
+    return resultat;
 }
-
-
-
-/*
-function inverser(){
-
-}
-
-*/
-
-
-
 
 console.log("le mot " + mot + " contient " + longueurMot + " caracteres");
 console.log("il s'ecrit en minucule : " + motEnMinuscules);
 console.log("il s'ecrit en majuscule : " + motEnMajuscules);
 console.log(nbVoyelle(mot));
+console.log("il s'ecrit à l'envers " + inverser(mot));
 
-
-
-
+//Palindrome/////////////////////////////////////////////////
+if (inverser(mot).toLowerCase() === mot.toLowerCase()) {
+    console.log("le mot est un palyndrome");
+} else {
+    console.log("Ce n'est pas un palyndrome");
+}
 
 
 
