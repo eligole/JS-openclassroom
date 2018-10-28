@@ -34,7 +34,7 @@ console.log("il s'ecrit en majuscule : " + motEnMajuscules);
 console.log(nbVoyelle(mot));
 console.log("il s'ecrit à l'envers " + inverser(mot));
 
-//Palindrome/////////////////////////////////////////////////
+//Palindrome
 if (inverser(mot).toLowerCase() === mot.toLowerCase()) {
     console.log("le mot est un palyndrome");
 } else {
@@ -42,10 +42,54 @@ if (inverser(mot).toLowerCase() === mot.toLowerCase()) {
 }
 
 
+/*
+        "4"= "a";
+        "8"="b";
+        "3"="e";
+        "1"="l";
+        "0"="o";
+        */
+
+
+for (var i = 0; i < mot.length; i++) {
+
+    if (mot[i] ==="a" ){
+       // var a = "a";
+       // var quatre = "4";
+        //mot[i]= quatre;
+        mot[i]= "4";
+    }
+
+    console.log(mot[i]);
+    console.log(mot);
+    //console.log(quatre);
+
+}
+
+//console.log(mot[i]);
 
 
 
-//Correction
+
+
+
+/*
+
+function convertirEnLeetSpeak() {
+
+
+}*/
+
+
+
+
+
+
+
+
+
+
+//Correction/////////////////////////////////////////////////////
 
 /*
  Exercice : analyse d'un mot
