@@ -9,7 +9,8 @@ function nbVoyelle(phrase) {
     var k = 1;
     //
     for (var i = 0; i < mot.length; i++) {
-        if ((mot[i] === "a") || (mot[i] === "e") || (mot[i] === "i") || (mot[i] === "o") || (mot[i] === "u") || (mot[i] === "y")) {
+        var lettre = mot[i];
+        if ((lettre === "a") || (lettre === "e") || (lettre === "i") || (lettre === "o") || (lettre === "u") || (lettre === "y")) {
             var nbVoyelle = j++;
         } else {
             var nbConsonne = k++;
@@ -22,6 +23,7 @@ function nbVoyelle(phrase) {
 function inverser(verlan) {
     var inverse = "";
     for (var i = mot.length - 1; i >= 0; i--) { //decrementation , ne pas oublier le -1 pour commencer par la derniere lettre.
+
         inverse = inverse + mot[i];
     }
     var resultat = inverse;
@@ -35,6 +37,7 @@ console.log(nbVoyelle(mot));
 console.log("il s'ecrit à l'envers " + inverser(mot));
 
 //Palindrome
+
 if (inverser(mot).toLowerCase() === mot.toLowerCase()) {
     console.log("le mot est un palyndrome");
 } else {
@@ -42,50 +45,61 @@ if (inverser(mot).toLowerCase() === mot.toLowerCase()) {
 }
 
 
+//leet speak
 /*
-        "4"= "a";
-        "8"="b";
-        "3"="e";
-        "1"="l";
-        "0"="o";
-        */
+function trouverLettreLeet(lettre) {
+    var a = lettre;
 
+        if (lettre == "a") {
+            var a = "4";
+          
+        } else if (lettre == "b") {
+            var a = "8";
 
-for (var i = 0; i < mot.length; i++) {
+        } else if (lettre == "e") {
+            var a = "3";
 
-    if (mot[i] ==="a" ){
-       // var a = "a";
-       // var quatre = "4";
-        //mot[i]= quatre;
-        mot[i]= "4";
-    }
+        } else if (lettre == "l") {
+            var a = "1";
 
-    console.log(mot[i]);
-    console.log(mot);
-    //console.log(quatre);
-
-}
-
-//console.log(mot[i]);
-
-
-
-
-
-
-/*
-
-function convertirEnLeetSpeak() {
-
+        } else if (lettre == "o") {
+            var a = "0";
+        }
+    return a;
 
 }*/
 
 
+function trouverLettreLeet(lettre) {
+    if (lettre == "a") {
+        lettre = "4";
+
+    } else if (lettre == "b") {
+        lettre = "8";
 
 
+    } else if (lettre == "e") {
+        lettre = "3";
 
+    } else if (lettre == "l") {
+        lettre = "1";
 
+    } else if (lettre == "o") {
+        lettre = "0";
+    }
+    return lettre;
+}
 
+// Renvoie un mot converti en "leet speak"
+function convertirEnLeetSpeek(mot) {
+    var motLeet = "";
+    for (var i = 0; i < mot.length; i++) {
+        motLeet = motLeet + trouverLettreLeet(mot[i]);
+    }
+    return motLeet;
+}
+
+console.log(convertirEnLeetSpeek(mot));
 
 
 
