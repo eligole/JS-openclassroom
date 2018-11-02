@@ -7,9 +7,15 @@ var Chien = {
         this.race = race;
         this.taille = taille;
     },
+    aboyer: function () {
 
-    aboyer : function (){
-        return "Grrr! Grrr!";
+        if (this.taille > 50) {
+            return "Grrr! Grrr!";
+        } else if (this.taille < 25) {
+            return "Kaii ! Kaii !";
+        } else {
+            return "Whoua ! Whoua !";
+        }
     }
 };
 
@@ -29,10 +35,10 @@ console.log("Tiens, un chat ! " + pupuce.nom + " aboie : " + pupuce.aboyer());
 
 ////Correction////////////////////////////////////////////////////////////////////////////////
 
-/*
-/*
-Exercice : objets chiens
 
+
+//Exercice : objets chiens
+/*
 
 var Chien = {
     // initialise le chien
