@@ -30,7 +30,7 @@ var Joueur = Object.create(Personnage);
 Joueur.initJoueur = function (nom, sante, force, piece, cles) {
     this.initPerso(nom, sante, force, piece, cles);
     this.xp = 0;
-    //this.piece = 10;///////////////////////////////////////
+    //this.piece = 10;/////////////////////////////////
     //this.cles = 1;//////////////////////////////////
 };
 // Renvoie la description du joueur
