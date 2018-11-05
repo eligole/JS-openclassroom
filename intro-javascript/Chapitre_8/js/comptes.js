@@ -3,23 +3,41 @@ var CompteBancaire = {
     initCB: function (nom, solde) {
         this.nom = nom;
         this.solde = solde;
-
-
     },
-    decrire() {},
-    debiter() {},
-    crediter() {}
-};
 
+    decrire: function () {
+        texte = "Titulaire : " + this.nom + ", solde : " + this.solde + "euros";
+        return texte;
+    },
+
+    debiter: function (solde) {
+        this.solde = this.solde - montant;
+        return solde;
+    }
+};
 
 var CompteEpargne = {
-    initCE: function () {},
-    decrire() {},
-    debiter() {},
-    crediter() {},
-    ajouterInterets() {}
-};
+    initCE: function (nom, solde, taux) {
+        this.nom = nom;
+        this.solde = solde;
+        this.taux = taux;
+    },
 
+    decrire: function () {
+        texte1 = "Titulaire : " + this.nom + ", solde : " + this.solde + "euros";
+        return texte1;
+    },
+    
+    crediter: function (solde) {
+        this.solde = this.solde + montant;
+        return solde;
+    },
+
+    ajouterInterets: function (montant) {
+        solde = this.taux * montant;
+        return solde;
+    }
+};
 
 //Crration des prototype
 var compte1 = Object.create(CompteBancaire);
