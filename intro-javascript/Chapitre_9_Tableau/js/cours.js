@@ -51,12 +51,3 @@ films.push(film3);
 films.forEach(function (film) {//ici on peux aussi utiliser une boucle "for" au lieu de forEach.
     console.log(film.decrire());
 });
-
-
-
-
-
-
-
-
-
